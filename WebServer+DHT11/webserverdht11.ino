@@ -56,7 +56,6 @@ void setup() {
 
 void loop() {
   server.handleClient(); //Chama o método handleClient()
-  delay(3000);
 }
 
 void handle_OnConnect() {
