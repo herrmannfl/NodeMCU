@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+  IP: <input type="text" id="enderecoIP"> <p>
+  Led Ligado?: <input type="checkbox" id="myCheck"> <p>
+   <button onclick="myFunction()">Enviar</button><p>
+
+<script>
+function myFunction() {
+  var xhttp = new XMLHttpRequest(); 
+  var ip = document.getElementById("enderecoIP").value;
+  var x = document.getElementById("myCheck");
+  var url = "http://" + ip + "/?led=";
+  if (x.checked){
+  	url = url + "ON";
+  }else{
+  	url = url + "OFF";
+  }
+  xhttp.open("POST", url);
+  xhttp.send();
+}
+</script>
+
+</body>
+</html>
